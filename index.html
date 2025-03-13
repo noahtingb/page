@@ -3,64 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Website</title>
+    <title>Scrollable Menu Website</title>
     <style>
         /* CSS Styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Menu */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
         }
 
-        .container {
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 14px 20px;
+            text-decoration: none;
         }
 
-        h1 {
-            color: #333;
+        nav ul li a:hover {
+            background-color: #575757;
         }
 
-        p {
-            color: #666;
+        /* Sections */
+        section {
+            height: 100vh;
+            padding: 60px 20px 20px;
+            text-align: center;
+            font-size: 2em;
         }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        #home {
+            background-color: #f4f4f4;
         }
 
-        button:hover {
-            background-color: #0056b3;
+        #about {
+            background-color: #e2e2e2;
+        }
+
+        #services {
+            background-color: #d1d1d1;
+        }
+
+        #contact {
+            background-color: #c0c0c0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to a Website</h1>
-        <p id="demo">This is a simple paragraph.</p>
-        <p id="demo">This is also simple paragraph.</p>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#personal">Personal</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <button onclick="changeText()">Click Me!</button>
-    </div>
-
-    <script>
-        // JavaScript Function
-        function changeText() {
-            document.getElementById("demo").innerHTML = "You clicked the button!";
-        }
-    </script>
+    <!-- Sections -->
+    <section id="home">
+        <p>I study at the moment Engineering Physic att Chalmers University.</p>
+    </section>
+    <section id="personal">
+        <h1>Personal</h1>
+    </section>
+    <section id="education">
+        <h1>Education</h1>
+        <p>Engineering Physic att Chalmers University</p>
+    </section>
+    <section id="experience">
+        <h1>My volenteer experience</h1>
+        <p>Intize</p>
+        <p>Expect 2025</p>
+        <p>Expect 2024</p>
+        <h1>My work experience</h1>
+        <p>Summerwork 2023 Manufacturing</p>
+        <p>Summerwork 2022 Manufacturing</p>
+    </section>
+    <section id="achievements">
+        <h1>Achievements</h1>
+        <p>5-place HMT 2020</p>
+    </section>
+    <section id="contact">
+        <h1>Contact Me</h1>
+    </section>
 </body>
 </html>
