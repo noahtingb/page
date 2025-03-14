@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
         }
+        
         .main-container {
             display: flex;
             width: 100%;
@@ -21,8 +22,10 @@
         .panel {
             flex:1;
             background-color: #111; /* Light black background for panels */
+            min-width: 0px;
         }
         .center-content {
+            flex:2;
             width: 1080px; /* Fixed width for center content */
         }
         /* Navigation Menu */
@@ -109,7 +112,15 @@
           padding:0;
           background-color:red;
         }
-    
+        @media (max-width: 1080px) {
+            .panel {
+                display: none; /* Hide panels on very small screens */
+            }
+
+            .center-content {
+                flex: 1; /* Center content takes full width */
+            }
+        }
     </style>
 </head>
 <body>
