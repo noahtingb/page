@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         .main-container {
             display: flex;
             width: 100%;
@@ -20,30 +20,36 @@
         }
 
         .panel {
-            flex:1;
+            flex: 1;
             background-color: #111; /* Light black background for panels */
             min-width: 100px;
         }
+
         .center-content {
-            flex:2;
+            flex: 2;
             width: 1080px; /* Fixed width for center content */
         }
+
         /* Navigation Menu */
         nav {
             position: fixed;
             top: 0;
-            width: 1080px;
+            width: 100%; /* Full width */
             background-color: #222222;
             z-index: 1000;
+            display: flex;
+            justify-content: center; /* Center the menu */
         }
 
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+            max-width: 1080px; /* Match center content width */
+            width: 100%;
         }
 
         nav ul li {
@@ -89,45 +95,63 @@
         #achievements {
             background-color: #c0c0c0;
         }
+
         #contact {
             background-color: #070707;
             color: #ffffff;
-            min-height: 33vh;
+            min-height: 33vh; /* Use min-height instead of fixed height */
         }
-        h2
-        {
-          margin:0;
-          padding:0;
-          font-size:42px;
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 42px;
         }
-        p
-        {
-          margin:0;
-          padding:0;
-          font-size:24px;
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
         }
-        div
-        {
-          margin:0;
-          padding:0;
-          background-color:red;
+
+        div {
+            margin: 0;
+            padding: 0;
+            background-color: red;
         }
+
         @media (max-width: 1080px) {
             .panel {
                 display: none; /* Hide panels on very small screens */
             }
 
             .center-content {
-                flex: 1; /* Center content takes full width */
+                width: 100%; /* Center content takes full width */
+                flex: 1;
+            }
+
+            nav ul {
+                max-width: 100%; /* Allow menu to take full width */
+            }
+
+            nav ul li a {
+                padding: 10px 15px; /* Reduce padding for smaller screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul li a {
+                padding: 8px 10px; /* Further reduce padding for very small screens */
+                font-size: 14px; /* Reduce font size for very small screens */
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Right Panel -->
+    <div class="main-container">
+        <!-- Left Panel -->
         <div class="panel"></div>
-        
+
         <!-- Center Content -->
         <div class="center-content">
             <!-- Navigation Menu -->
@@ -141,39 +165,39 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-    
+
             <!-- Sections -->
             <section id="home">
                 <h2>Hello,</h2>
-                <p>I study at the moment Engineering Physic at Chalmers University.</p>
+                <p>I study at the moment Engineering Physics at Chalmers University.</p>
             </section>
             <section id="personal">
                 <h2>Personal</h2>
             </section>
             <section id="education">
                 <h2>Education</h2>
-                <p>Engineering Physic at Chalmers University</p>
+                <p>Engineering Physics at Chalmers University</p>
             </section>
             <section id="experience">
-                <h2>My volenteer experience</h2>
+                <h2>My Volunteer Experience</h2>
                 <p>Intize</p>
                 <p>Expect 2025</p>
                 <p>Expect 2024</p>
-                <h2>My work experience</h2>
-                <p>Summerwork 2023 Manufacturing</p>
-                <p>Summerwork 2022 Manufacturing</p>
+                <h2>My Work Experience</h2>
+                <p>Summer Work 2023 - Manufacturing</p>
+                <p>Summer Work 2022 - Manufacturing</p>
             </section>
             <section id="achievements">
                 <h2>Achievements</h2>
-                <p>5-place in <a href="http://www.matematiktavling.org/statistik/ar?year=HMT+2019%2F2020" target="_blank">HMT 2020 </a></p>
+                <p>5th Place in <a href="http://www.matematiktavling.org/statistik/ar?year=HMT+2019%2F2020" target="_blank">HMT 2020</a></p>
             </section>
             <section id="contact">
                 <h2>Contact Me</h2>
-                <p>Link for <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color:#FFFFFF;">contactinformation</a> </p>
+                <p>Link for <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color:#FFFFFF;">Contact Information</a></p>
                 <p style="font-size:1px;">I'm sorry</p>
             </section>
         </div>
-        
+
         <!-- Right Panel -->
         <div class="panel"></div>
     </div>
