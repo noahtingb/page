@@ -13,9 +13,9 @@
         }
         .container {
             display: grid;
-            grid-template-columns: 1fr 2fr 1fr; /* Left panel, center, right panel */
+            grid-template-columns: 7fr 18fr 7fr; /* Left panel, center, right panel */
             width: 100%;
-            max-width: 1200px; /* Adjust as needed */
+            max-width: 1920px; /* Adjust as needed */
         }
 
         .panel {
@@ -26,8 +26,8 @@
         nav {
             position: fixed;
             top: 0;
-            width: 100%;
-            background-color: #333;
+            width: 56.25%;
+            background-color: #101010;
             z-index: 1000;
         }
 
@@ -109,7 +109,7 @@
              @media (max-width: 768px) {
             .panel {
                 flex: 0.5; /* Panels take less space on smaller screens */
-                min-width: 50px; /* Further reduce minimum width */
+                min-width: 0px; /* Further reduce minimum width */
             }
 
             .center-content {
@@ -120,7 +120,7 @@
         @media (max-width: 480px) {
             .panel {
                 flex: 0.2; /* Panels take even less space on very small screens */
-                min-width: 20px; /* Further reduce minimum width */
+                min-width: 0px; /* Further reduce minimum width */
             }
 
             .center-content {
