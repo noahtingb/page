@@ -11,7 +11,16 @@
             margin: 0;
             padding: 0;
         }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr; /* Left panel, center, right panel */
+            width: 100%;
+            max-width: 1200px; /* Adjust as needed */
+        }
 
+        .panel {
+            background-color: #ccc; /* Light gray background for panels */
+        }
         /* Navigation Menu */
         nav {
             position: fixed;
@@ -99,6 +108,10 @@
     </style>
 </head>
 <body>
+    <dic class="container">
+     <!-- Right Panel -->
+        <div class="panel"></div>
+    <div>
     <!-- Navigation Menu -->
     <nav>
         <ul>
@@ -141,5 +154,9 @@
         <p>Link for <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="color:#FFFFFF;">contactinformation</a> </p>
         <p style="font-size:1px;">I'm sorry</p>
     </section>
+    </div>
+        <!-- Right Panel -->
+        <div class="panel"></div>
+    </div>
 </body>
 </html>
