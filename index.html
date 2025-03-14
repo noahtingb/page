@@ -11,15 +11,19 @@
             margin: 0;
             padding: 0;
         }
-        .container {
-            display: grid;
+        .main-container {
+            display: flex;
             width: 100%;
             max-width: 1920px; /* Adjust as needed */
+            margin: 0 auto; /* Center the container */
         }
 
         .panel {
             flex:1;
             background-color: #111; /* Light gray background for panels */
+        }
+        .center-content {
+            width: 1080px; /* Fixed width for center content */
         }
         /* Navigation Menu */
         nav {
@@ -112,7 +116,8 @@
     <dic class="container">
      <!-- Right Panel -->
         <div class="panel"></div>
-    <div styles="width:1080;">
+    <!-- Center Content -->
+    <div class="center-content">
     <!-- Navigation Menu -->
     <nav>
         <ul>
