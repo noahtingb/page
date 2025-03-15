@@ -298,7 +298,11 @@
                 <h2 data-lang="sv">Utbildning</h2>
 
                 <h3 id="cv_education_h1"></h3>
-                <p id="cv_education_p1"></p>
+                <p id="cv_education_p10"></p>
+                <p id="cv_education_p11"></p>
+                <p id="cv_education_p12"></p>
+                <p id="cv_education_p13"></p>
+
                 <h3 id="cv_education_h2"></h3>
                 <p id="cv_education_p2"></p>
 
@@ -315,6 +319,9 @@
             <section id="achievements">
                 <h2>Achievements</h2>
                 <h3>5th Place in <a href="http://www.matematiktavling.org/statistik/ar?year=HMT+2019%2F2020" target="_blank">HMT 2020</a></h3>
+                <h3 id="cv_ach_h1"></h3>
+                <p id="cv_ach_p1"></p>
+                
             </section>
             <section id="contact">
                 <h2>Contact Me</h2>
@@ -351,14 +358,13 @@
         // Update dynamic content from the stored JSON data
         if (jsonData) {
             // Update education section
-            document.getElementById('cv_education_h2').textContent = jsonData[language]['edu'].h2;
             document.getElementById('cv_education_h1').textContent = jsonData[language]['edu'].h1;
+            document.getElementById('cv_education_h2').textContent = jsonData[language]['edu'].h2;
+            document.getElementById('cv_education_p10').textContent = jsonData[language]['edu'].p10;
             document.getElementById('cv_education_p11').textContent = jsonData[language]['edu'].p11;
             document.getElementById('cv_education_p12').textContent = jsonData[language]['edu'].p12;
             document.getElementById('cv_education_p13').textContent = jsonData[language]['edu'].p13;
             document.getElementById('cv_education_p2').textContent = jsonData[language]['edu'].p2;
-            console.log(jsonData[language]['edu'].p10)
-            document.getElementById('cv_education_p10').textContent = jsonData[language]['edu'].p10;
             // Update achievements section
             document.getElementById('cv_ach_h1').textContent = jsonData[language]['ach'].h1;
             document.getElementById('cv_ach_p1').textContent = jsonData[language]['ach'].p1;
