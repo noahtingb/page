@@ -356,13 +356,15 @@
             .then(data => {
                 // Display the data in the HTML elements
                 const langu=document.getElementById('language-select').value;
-                document.getElementById('cv_education_h1').textContent = data[langu]['edu'].h1;
-                document.getElementById('cv_education_p1_0').textContent = data[langu]['edu'].p1_0;
-                document.getElementById('cv_education_p1_1').textContent = data[langu]['edu'].p1_1;
-                document.getElementById('cv_education_p1_2').textContent = data[langu]['edu'].p1_2;
-                document.getElementById('cv_education_p1_3').textContent = data[langu]['edu'].p1_3;
-                document.getElementById('cv_education_h2').textContent = data[langu]['edu'].h2;
-                document.getElementById('cv_education_p2').textContent = data[langu]['edu'].p2;     
+                const edu=data[langu]['edu'];
+
+                document.getElementById('cv_education_h1').textContent = edu.h1;
+                document.getElementById('cv_education_p1_0').textContent = edu.p1_0;
+                document.getElementById('cv_education_p1_1').textContent = edu.p1_1;
+                document.getElementById('cv_education_p1_2').textContent = edu.p1_2;
+                document.getElementById('cv_education_p1_3').textContent = edu.p1_3;
+                document.getElementById('cv_education_h2').textContent = edu.h2;
+                document.getElementById('cv_education_p2').textContent = edu.p2;     
                 
                 const ach=data[langu]["ach"];
                 document.getElementById('cv_ach_h1').textContent = ach.h1;
