@@ -32,10 +32,12 @@
 
         .language-switcher select {
             padding: 5px;
-            font-size: 16px;
+            font-size: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #fff;
+            background-color: #333;
             cursor: pointer;
         }
         /* Videos in Panels */
@@ -217,14 +219,12 @@
 
                     <li><a href="#contact" data-lang="en">Contact</a></li>
                     <li><a href="#contact" data-lang="sv">Kontakt</a></li>
-                    <li><a href="#contact" data-lang="es">Contacto</a></li>
-                    <li><a href="#contact" data-lang="fr">Contact</a></li>
 
                     <!-- Language Switcher -->
                     <li class="language-switcher">
                         <select id="language-select">
-                            <option value="en">English</option>
-                            <option value="sv">Svenska</option>
+                            <option value="en" style="color=000000;">English</option>
+                            <option value="sv" style="color=000000;">Svenska</option>
                         </select>
                     </li>
                 </ul>
