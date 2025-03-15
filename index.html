@@ -23,7 +23,27 @@
             flex: 1;
             background-color: #111; /* Light black background for panels */
             min-width: 0px;
+            poition: relative;
         }
+        /* Videos in Panels */
+        .panel video {
+            position: fixed; /* Fix the video in place */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Center vertically */
+            width: 100%; /* Full width of the panel */
+            max-width: 100%; /* Ensure it doesn't overflow */
+            height: auto; /* Maintain aspect ratio */
+        }
+        /* Left Panel Video */
+        .panel.left video {
+            left: 0; /* Align to the left */
+        }
+
+        /* Right Panel Video */
+        .panel.right video {
+            right: 0; /* Align to the right */
+        }
+
 
         .center-content {
             flex: 100000;
@@ -158,7 +178,11 @@
 <body>
     <div class="main-container">
         <!-- Left Panel -->
-        <div class="panel"></div>
+        <div class="panel">
+            <iframe width="420" height="315"
+                src="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            </iframe>
+        </div>
 
         <!-- Center Content -->
         <div class="center-content">
@@ -207,7 +231,11 @@
         </div>
 
         <!-- Right Panel -->
-        <div class="panel"></div>
+        <div class="panel">
+            <iframe width="420" height="315"
+                src="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            </iframe>
+        </div>
     </div>
 </body>
 </html>
