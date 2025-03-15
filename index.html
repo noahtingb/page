@@ -279,9 +279,10 @@
             
             <section id="education">
                 <h2>Education</h2>
-                <p data-lang="en" id="cv_education_english_h1"></p>
-                <p data-lang="sv" id="cv_education_swedish_h1"></p>
-
+                <h3 data-lang="en" style="text-indent: 0.05vw;" id="cv_education_en_h1"></h3>
+                <h3 data-lang="sv" style="text-indent: 0.05vw;" id="cv_education_sv_h1"></h3>
+                <h3 data-lang="en" style="text-indent: 0.05vw;" id="cv_education_en_h2"></h3>
+                <h3 data-lang="sv" style="text-indent: 0.05vw;" id="cv_education_sv_h2"></h3>
             </section>
             <section id="experience">
                 <h2>My Volunteer Experience</h2>
@@ -337,8 +338,10 @@
             .then(response => response.json()) // Parse the JSON data
             .then(data => {
                 // Display the data in the HTML elements
-                document.getElementById('cv_education_english_h1').textContent = data.cv_education_english_h1;
-                document.getElementById('cv_education_swedish_h1').textContent = data.cv_education_swedish_h1;
+                document.getElementById('cv_education_en_h1').textContent = data.cv_education_english_h1;
+                document.getElementById('cv_education_sv_h1').textContent = data.cv_education_swedish_h1;
+                document.getElementById('cv_education_en_h2').textContent = data.cv_education_english_h2;
+                document.getElementById('cv_education_sv_h2').textContent = data.cv_education_swedish_h2;
             })
             .catch(error => {
                 console.error('Error fetching JSON:', error);
