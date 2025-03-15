@@ -351,12 +351,12 @@
         // Update dynamic content from the stored JSON data
         if (jsonData) {
             // Update education section
+            document.getElementById('cv_education_h2').textContent = jsonData[language]['edu'].h2;
             document.getElementById('cv_education_h1').textContent = jsonData[language]['edu'].h1;
             document.getElementById('cv_education_p1_0').textContent = jsonData[language]['edu'].p1_0;
             document.getElementById('cv_education_p1_1').textContent = jsonData[language]['edu'].p1_1;
             document.getElementById('cv_education_p1_2').textContent = jsonData[language]['edu'].p1_2;
             document.getElementById('cv_education_p1_3').textContent = jsonData[language]['edu'].p1_3;
-            document.getElementById('cv_education_h2').textContent = jsonData[language]['edu'].h2;
             document.getElementById('cv_education_p2').textContent = jsonData[language]['edu'].p2;
 
             // Update achievements section
