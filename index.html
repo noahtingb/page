@@ -328,66 +328,52 @@
             
         </div>
     </div>
-</body>
-    
+</body>    
+
 <script>
-    // JavaScript for Language Switcher
-    const languageSelect = document.getElementById("language-select");
-    const elements = document.querySelectorAll("[data-lang]");
-    let jsonData = null; // Variable to store the fetched JSON data
+         // JavaScript for Language Switcher
+         const languageSelect = document.getElementById("language-select");
+         const elements = document.querySelectorAll("[data-lang]");
+ 
+         languageSelect.addEventListener("change", function () {
+             const selectedLanguage = this.value;
+ 
+             // Hide all language-specific elements
+             elements.forEach((element) => {
+                 element.style.display = "none";
+             });
+ 
+             // Show elements for the selected language
+             document.querySelectorAll(`[data-lang="${selectedLanguage}"]`).forEach((element) => {
+                 element.style.display = "block";
+             });
+             fetch('data.json')
+             .then(response => response.json()) // Parse the JSON data
+             .then(data => {
+                 const langu=document.getElementById('language-select').value;
+                 const edu=data[langu]['edu']; 
+                 document.getElementById('cv_education_h1').textContent = edu.h1;
+                 document.getElementById('cv_education_p1_0').textContent = edu.p1_0;
+                 document.getElementById('cv_education_p1_1').textContent = edu.p1_1;
+                 document.getElementById('cv_education_p1_2').textContent = edu.p1_2;
+                 document.getElementById('cv_education_p1_3').textContent = edu.p1_3;
+                 document.getElementById('cv_education_h2').textContent = edu.h2;
+                 document.getElementById('cv_education_p2').textContent = edu.p2;     
+ 
+                 const ach=data[langu]["ach"];
+                 document.getElementById('cv_ach_h1').textContent = ach.h1;
+                 document.getElementById('cv_ach_p1').textContent = ach.p1;     
+ 
+             })
+             .catch(error => {
+                 console.error('Error fetching JSON:', error);
+             })
+         });
+ 
+         // Initialize with the default language (English)
+         languageSelect.value = "en";
+         languageSelect.dispatchEvent(new Event("change"));
+ 
 
-    // Function to update content based on selected language
-    function updateContent(language) {
-        // Hide all language-specific elements
-        elements.forEach((element) => {
-            element.style.display = "none";
-        });
-
-        // Show elements for the selected language
-        document.querySelectorAll(`[data-lang="${language}"]`).forEach((element) => {
-            element.style.display = "block";
-        });
-
-        // Update dynamic content from the stored JSON data
-        if (jsonData) {
-            const edu = jsonData[language]['edu'];
-            const ach = jsonData[language]['ach'];
-
-            // Update education section
-            document.getElementById('cv_education_h1').textContent = edu.h1;
-            document.getElementById('cv_education_p1_0').textContent = edu.p1_0;
-            document.getElementById('cv_education_p1_1').textContent = edu.p1_1;
-            document.getElementById('cv_education_p1_2').textContent = edu.p1_2;
-            document.getElementById('cv_education_p1_3').textContent = edu.p1_3;
-            document.getElementById('cv_education_h2').textContent = edu.h2;
-            document.getElementById('cv_education_p2').textContent = edu.p2;
-
-            // Update achievements section
-            document.getElementById('cv_ach_h1').textContent = ach.h1;
-            document.getElementById('cv_ach_p1').textContent = ach.p1;
-        }
-    }
-
-    // Fetch JSON data once when the page loads
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            jsonData = data; // Store the JSON data
-
-            // Initialize with the saved language or default to English
-            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-            languageSelect.value = savedLanguage;
-            updateContent(savedLanguage); // Update content with the saved language
-        })
-        .catch(error => {
-            console.error('Error fetching JSON:', error);
-        });
-
-    // Event listener for language change
-    languageSelect.addEventListener("change", function () {
-        const selectedLanguage = this.value;
-        localStorage.setItem('selectedLanguage', selectedLanguage); // Save the selected language
-        updateContent(selectedLanguage); // Update content
-    });
-</script>
+ </script>
 </html>
