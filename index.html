@@ -338,10 +338,10 @@
             .then(response => response.json()) // Parse the JSON data
             .then(data => {
                 // Display the data in the HTML elements
-                document.getElementById('cv_education_en_h1').textContent = data.cv_education_english_h1;
-                document.getElementById('cv_education_sv_h1').textContent = data.cv_education_swedish_h1;
-                document.getElementById('cv_education_en_h2').textContent = data.cv_education_english_h2;
-                document.getElementById('cv_education_sv_h2').textContent = data.cv_education_swedish_h2;
+                document.getElementById('cv_education_en_h1').textContent = data.cv_education_en_h1;
+                document.getElementById('cv_education_sv_h1').textContent = data.cv_education_sv_h1;
+                document.getElementById('cv_education_en_h2').textContent = data.cv_education_en_h2;
+                document.getElementById('cv_education_sv_h2').textContent = data.cv_education_sv_h2;
             })
             .catch(error => {
                 console.error('Error fetching JSON:', error);
