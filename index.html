@@ -22,19 +22,19 @@
         .panel {
             flex: 1;
             background-color: #111; /* Light black background for panels */
-            min-width: 0px;
+            min-width: 100px;
         }
 
         .center-content {
-            flex: 10000;
+            flex: 100000;
             width: 1080px; /* Fixed width for center content */
-            min-width: 1080px; /* Fixed width for center content */
         }
 
         /* Navigation Menu */
         nav {
+            position: fixed;
             top: 0;
-            max-width: 1080px; /* Full width */
+            width: 100%; /* Full width */
             background-color: #222222;
             z-index: 1000;
             display: flex;
@@ -49,6 +49,7 @@
             justify-content: center;
             flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
             max-width: 1080px; /* Match center content width */
+            width: 100%;
         }
 
         nav ul li {
@@ -168,7 +169,7 @@
             <!-- Sections -->
             <section id="home">
                 <h2>Hello,</h2>
-                <p>I study at the moment Engineering Physics at Chalmers University. I'm live in the central parts of Goutenbyrg but I'm from the countryside.</p>
+                <p>I study at the moment Engineering Physics at Chalmers University.</p>
             </section>
             <section id="personal">
                 <h2>Personal</h2>
