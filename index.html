@@ -345,7 +345,7 @@
             .then(data => {
                 // Display the data in the HTML elements
                 const langu=document.getElementById('language-select').value;
-                document.getElementById('cv_education_h1').textContent = datalangu].cv_education_h1;
+                document.getElementById('cv_education_h1').textContent = data[langu].cv_education_h1;
                 document.getElementById('cv_education_p1').textContent = data[langu].cv_education_p1;
                 document.getElementById('cv_education_h2').textContent = data[langu].cv_education_h2;
                 document.getElementById('cv_education_p2').textContent = data[langu].cv_education_p2;                
