@@ -175,7 +175,6 @@
             margin: 0;
             padding-left:76.8px;
             font-size: 18px;
-            min-font-size: 8px;
         }
         p1 {
             align="justify";
@@ -185,7 +184,6 @@
             font-size: 18px;
             padding-top:3.24px;            
             padding-bottom:6.48px;
-            min-font-size: 8px;            
         }
 
         div {
@@ -261,8 +259,15 @@
                 padding: 2.166666vw 1.2vw;
                 font-size: 2.5vw;
                 border: 0.08888vw solid #ccc;
+            }   
+        }
+        @media (max-width: 480px) {
+            p {
+                font-size: 8px;
             }
-            
+            p1 {
+                font-size: 8vw;
+            }
         }
     </style>
 </head>
